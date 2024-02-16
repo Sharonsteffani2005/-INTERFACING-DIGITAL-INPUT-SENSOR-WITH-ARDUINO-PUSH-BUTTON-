@@ -37,6 +37,8 @@ Clock Speed	16 MHz
 
 FIGURE-01
 ![image](https://user-images.githubusercontent.com/36288975/163530431-4d390e98-0942-42d8-95b8-f57d348e6ad8.png)
+![ROBOTICS 1](https://github.com/Sharonsteffani2005/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/144979934/9ef60553-11c4-463c-b27e-46982a915f8f)
+
 
 FIGURE-02
 ## PROCEDURE 
@@ -63,7 +65,31 @@ FIGURE -03
 
 ## PROGRAM 
  
- 
+ int led=3;
+int pushbutton=4;
+void setup()
+{
+  pinMode(led,OUTPUT);
+  pinMode(pushbutton,INPUT);
+}
+
+void loop()
+{
+  int pb;
+  pb=digitalRead(pushbutton);
+  if(pb==HIGH)
+  {
+    digitalWrite(led,HIGH);
+    delay(500);
+    digitalWrite(led,LOW);
+    delay(500);
+  }
+  else
+  {
+    digitalWrite(led,LOW);
+    delay(500);
+  }
+}
 
 
 
